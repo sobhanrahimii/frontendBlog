@@ -1,0 +1,85 @@
+@import "../../App.scss";
+
+.navbar{
+    height: 80px;
+    
+    &.fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999; 
+        box-shadow: 1px 10px 2px 1px rgba(115, 115, 216, 0.2);
+    }
+    .navbar-brand{
+        &-icon{
+            margin-right: 5px;
+        }
+    }
+
+    .lange-btn{
+        margin-left: 25px;
+        padding: 20px;
+        background-color: $clr-mid-purple;
+        cursor: pointer;
+        font-family: 'Noto Sans', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        transition: $transition;
+
+        &:hover{
+            background-color: #aaa;
+            color: #ffffff;
+        }
+
+        .btn-select{
+            background-color: greenyellow;
+            padding: 8px;
+            border-radius: 10%;
+        }
+    }
+
+    .navbar-row{
+        .navbar-nav{
+            .nav-item{
+                margin-left: 36px;
+
+                &:hover .nav-link{
+                    color: $clr-dark-blue;
+                    transition: $transition;
+                }
+
+                .auth{
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                }
+            }
+
+            @media screen and (max-width: 768px){
+                display: none;
+            }
+        }
+
+        .vertical-line{
+            height: 30px;
+            width: 3px;
+            background-color: $clr-mid-purple;
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+
+        .sidebar-show-btn{
+            border-radius: 2px;
+            margin-left: 32px;
+            padding: 4px;
+            border: 1px solid $clr-white;
+            transition: $transition;
+
+            &:hover{
+                background-color: transparent;
+                color: $clr-white;
+            }
+        }
+    }
+}
