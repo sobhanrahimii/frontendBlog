@@ -16,7 +16,10 @@ $base-font-family: 'Lora', serif;
 $font-family-lora: 'Lora', serif;
 $font-family-rubik: 'Rubik', sans-serif;
 $transition: all 300ms ease-in-out;
-
+@font-face {
+    font-family: 'IRAN-Kharazmi';
+    src: url('../public/IRAN_Kharazmi/IRAN_Kharazmi/IRAN-Kharazmi.ttf') format("truetype");
+}
 *,
 *::after,
 *::before{
@@ -32,6 +35,7 @@ body{
     font-size: 1.6rem;
     line-height: 1.6;
     font-family: $font-family-lora;
+    font-family: 'IRAN-Kharazmi', sans-serif;
     color: $clr-grey;
 }
 ul{

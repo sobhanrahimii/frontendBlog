@@ -4,8 +4,10 @@ import Title from "../../components/Title/Title";
 import { toast } from "react-toastify";
 import axios from "axios";
 import "./LoginPage.scss"
+import { useTranslation } from "react-i18next";
 
 const Login = () => {
+  const {t} = useTranslation("global")
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
@@ -28,20 +30,20 @@ const Login = () => {
       );
       if (res.data) {
         navigate("/");
-        toast.success("Welcome");
+        toast.success(`${t("toast.Welcome")}`);
       }
     } catch (error) {
       if (!error?.response) {
-        toast.error("No server response")
+        toast.error(`${t('toast.server_msg')}`)
       }
       if (error.response?.status === 400) {
-        toast.error("Missing username or password")
+        toast.error(`${t('toast.notFound_msg')}`)
       }
       if (error.response?.status === 401) {
         console.log("unauthorized entered");
         toast.error("Unauthorized")
       }
-      toast.error("Wrong Password Or Username!");
+      toast.error(`${t('toast.notFound_msg')}`)
     }
   };
   return (

@@ -57,6 +57,7 @@ const Home = () => {
                   className="form-control fs-20"
                   placeholder={`${t('home_page.placeholder')}`}
                   onChange={(e) => handleSearchTerm(e)}
+                  required
                 />
                
                 <button

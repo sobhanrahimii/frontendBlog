@@ -20,6 +20,11 @@
   "title" : {
     "Blogs List" : "Blogs List"
   },
+  "toast" : {
+    "Welcome" : "Welcome 😊",
+    "server_msg" : "No server response 🤨",
+    "notFound_msg" : "Missing username or password" 
+  },
   "home_page": {
     "banner_text": "a beatuiful blog with no images required 😊",
     "error_msg": "No results found !",
