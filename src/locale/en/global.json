@@ -1,7 +1,9 @@
 {
   "nav": {
     "Home": "Home",
-    "Blogs": "Blogs"
+    "Blogs": "Blogs",
+    "Login" : "Login",
+    "Register" : "Register"
   },
   "sidebar": {
     "Home": "Home",
@@ -18,7 +20,8 @@
     "Username" : "Username"
   },
   "title" : {
-    "Blogs List" : "Blogs List"
+    "Blogs List" : "Blogs List",
+    "Blog Details" : "Blog"
   },
   "toast" : {
     "Welcome" : "Welcome 😊",
@@ -29,6 +32,12 @@
     "banner_text": "a beatuiful blog with no images required 😊",
     "error_msg": "No results found !",
     "placeholder" : "Search here blog"
+  },
+  "Login_Page" : {
+    "Username" : "Username",
+    "Password" : "Password",
+    "Login_btn" : "Login",
+    "title" : "Don't have an account"
   },
   "Blog": {
     "ReadMoreBtn": "Read More",

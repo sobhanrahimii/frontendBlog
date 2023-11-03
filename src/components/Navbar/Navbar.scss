@@ -81,5 +81,18 @@
                 color: $clr-white;
             }
         }
+
+        .sidebar-blog-btn{
+            border-radius: 2px;
+            margin-left: 32px;
+            padding: 4px;
+            border: 1px solid $clr-white;
+            transition: $transition;
+
+            &:hover{
+                background-color: transparent;
+                color: $clr-white;
+            }
+        }
     }
 }

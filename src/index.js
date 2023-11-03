@@ -11,6 +11,8 @@ import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
 import global_en from "./locale/en/global.json";
 import global_fa from "./locale/fa/global.json";
+import { Provider } from "react-redux";
+import store from "./slice/store";
 
 i18next.init({
   lng: "fa",
@@ -36,7 +38,9 @@ root.render(
         <BlogsProvider>
           <UserProvider>
             <CommentsProvider>
-              <App />
+              <Provider store={store}>
+                <App />
+              </Provider>
             </CommentsProvider>
           </UserProvider>
         </BlogsProvider>

@@ -8,12 +8,17 @@ import search_icon from "../../assets/images/search_icon.png";
 import { useSidebarContext } from "../../context/sidebarContext";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "react-responsive";
+import Blog_Create from "../Create/Blog_Create";
+import { useSelector } from "react-redux";
+import Login from "../../pages/Login/Login";
 
 const Navbar = () => {
-  const [header,setHeader] = useState(false)
+  const [header, setHeader] = useState(false);
   const desktopMobile = useMediaQuery({
     query: "(max-width:1300px)",
   });
+
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
   useEffect(() => {
     const handlScroll = () => {
@@ -29,7 +34,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handlScroll);
     };
-    desktopMobile()
+    desktopMobile();
   }, []);
 
   const { t, i18n } = useTranslation("global");
@@ -38,7 +43,9 @@ const Navbar = () => {
   };
   const { openSidebar } = useSidebarContext();
   return (
-    <nav className={`navbar bg-purple flex align-center ${header ? 'fixed' : ''}`}>
+    <nav
+      className={`navbar bg-purple flex align-center ${header ? "fixed" : ""}`}
+    >
       <button className="lange-btn" onClick={() => handleLangle("fa")}>
         Fa
       </button>
@@ -72,15 +79,15 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <div className="auth">
+                  <Link to="/login" className="nav-link text-white fw-4 fs-19">
+                    {t("nav.Login")} |
+                  </Link>
+
                   <Link
                     to="/register"
                     className="nav-link text-white fw-4 fs-19"
                   >
-                    ثبت نام |
-                  </Link>
-
-                  <Link to="/login" className="nav-link text-white fw-4 fs-19">
-                    ورود
+                    {t("nav.Register")}
                   </Link>
                 </div>
               </li>
@@ -88,9 +95,19 @@ const Navbar = () => {
             <div className="vertical-line"></div>
 
             <div className="navbar-btns flex align-center">
-              <button type="button" className="navbar-search-btn">
-                <img src={search_icon} alt="" />
-              </button>
+              {isLoggedIn ? (
+                
+                  <Link to="/create-blog">
+                    <button className="sidebar-show-btn bg-white flex align-center justify-center">create Blog</button>
+                  </Link>
+                
+              ) : (
+                <button>
+                  <Link to="/login">
+                  <button className="sidebar-show-btn bg-white flex align-center justify-center">create Blog</button>
+                  </Link>
+                </button>
+              )}
               <button
                 type="button"
                 className="sidebar-show-btn bg-white flex align-center justify-center"

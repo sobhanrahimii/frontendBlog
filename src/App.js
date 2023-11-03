@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import Loader from "./components/Loader/Loader";
 import { ToastContainer } from "react-toastify";
 import Login from "./pages/Login/Login";
+import Blog_Create from "./components/Create/Blog_Create";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,6 +32,7 @@ function App() {
         ) : (
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/create-blog" element={<Blog_Create />} />
             <Route path="/blogs" element={<BlogsPage />} />
             <Route path="/blogs/:id" element={<SingleBlogPage />} />
             <Route path="/login" element={<Login />} />
