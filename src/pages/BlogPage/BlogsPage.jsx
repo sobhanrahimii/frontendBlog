@@ -4,8 +4,10 @@ import { useBlogsContext } from "../../context/blogsContext";
 import Loader from "../../components/Loader/Loader";
 import { MdAddReaction } from 'react-icons/md'
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const BlogsPage = () => {
+  const { t } = useTranslation('global')
   const { blogs, blogsLoading } = useBlogsContext();
 
   if (blogsLoading) {
@@ -18,10 +20,10 @@ const BlogsPage = () => {
         <>
           <div className="blog-item" key={blog.id}>
             <div className="blog-item-title fw-5 fs-18 font-rubik">
-              {blog.title}
+            {t(`Blog.blogList${blog.id}title`)}
             </div>
             <div className="blog-item-text">
-              {blog.body.substring(0,100)}...
+            {t(`Blog.blogList${blog.id}body`).substring(0, 100)}...
             </div>
 
             <div className="blog-item-reaction flex align-center">
@@ -47,7 +49,7 @@ const BlogsPage = () => {
                 to={`${blog.id}`}
                 className="read-more-btn font-rubik fw-4"
               >
-                Read More
+                {t('Blog.ReadMoreBtn')}
               </Link>
             </div>
 

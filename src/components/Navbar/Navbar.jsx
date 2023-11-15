@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { GiPapers } from "react-icons/gi";
+import { IoIosLogIn } from 'react-icons/io'
 import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
 import search_icon from "../../assets/images/search_icon.png";
@@ -78,7 +79,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
+              
                 <div className="auth">
+                <IoIosLogIn size={25} className="icon" />
                   <Link to="/login" className="nav-link text-white fw-4 fs-19">
                     {t("nav.Login")} |
                   </Link>
@@ -98,13 +101,13 @@ const Navbar = () => {
               {isLoggedIn ? (
                 
                   <Link to="/create-blog">
-                    <button className="sidebar-show-btn bg-white flex align-center justify-center">create Blog</button>
+                    <button className="sidebar-show-btn bg-white flex align-center justify-center">{t('Blog.createBlogBtn')}</button>
                   </Link>
                 
               ) : (
                 <button>
                   <Link to="/login">
-                  <button className="sidebar-show-btn bg-white flex align-center justify-center">create Blog</button>
+                  <button className="sidebar-show-btn bg-white flex align-center justify-center">{t('Blog.createBlogBtn')}</button>
                   </Link>
                 </button>
               )}

@@ -12,7 +12,7 @@ const Sidebar = () => {
     // sidebar context
     const {isopenSidebar, closeSidebar} = useSidebarContext();
   return (
-    <div className = {`sidebar ${isopenSidebar ? 'sidebar-open' : ""}`}>
+    <div className = {`sidebar ${isopenSidebar ? 'sidebar-open' : ""}`}  dir="auto">
         <button type = "button" className='sidebar-close-btn' onClick={() => closeSidebar()}>
             <FaTimes size = {24} className='text-white' />
         </button>

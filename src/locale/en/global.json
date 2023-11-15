@@ -2,8 +2,8 @@
   "nav": {
     "Home": "Home",
     "Blogs": "Blogs",
-    "Login" : "Login",
-    "Register" : "Register"
+    "Login": "Login",
+    "Register": "Register"
   },
   "sidebar": {
     "Home": "Home",
@@ -17,33 +17,34 @@
     "phone_desc": "01-1253263",
     "Email": "Email",
     "Email_desc": "sobhanr189@gmail.com",
-    "Username" : "Username"
+    "Username": "Username"
   },
-  "title" : {
-    "Blogs List" : "Blogs List",
-    "Blog Details" : "Blog"
+  "title": {
+    "Blogs List": "Blogs List",
+    "Blog Details": "Blog"
   },
-  "toast" : {
-    "Welcome" : "Welcome 😊",
-    "server_msg" : "No server response 🤨",
-    "notFound_msg" : "Missing username or password" 
+  "toast": {
+    "Welcome": "Welcome 😊",
+    "server_msg": "No server response 🤨",
+    "notFound_msg": "Missing username or password"
   },
   "home_page": {
     "banner_text": "a beatuiful blog with no images required 😊",
     "error_msg": "No results found !",
-    "placeholder" : "Search here blog"
+    "placeholder": "Search here blog"
   },
-  "Login_Page" : {
-    "Username" : "Username",
-    "Password" : "Password",
-    "Login_btn" : "Login",
-    "title" : "Don't have an account"
+  "Login_Page": {
+    "Username": "Username",
+    "Password": "Password",
+    "Login_btn": "Login",
+    "title": "Don't have an account"
   },
   "Blog": {
+    "createBlogBtn": "Create Blog",
     "ReadMoreBtn": "Read More",
-    "comments" : "Comment(s)",
-    "PopularTags" : "Popular Tags",
-    "Recent News" : "Recent News",
+    "comments": "Comment(s)",
+    "PopularTags": "Popular Tags",
+    "Recent News": "Recent News",
     "blogList1title": "His mother had always taught him",
     "blogList1body": "His mother had always taught him not to ever think of himself as better than others. He'd tried to l...",
 
@@ -123,7 +124,7 @@
     "blogList26body": "She patiently waited for his number to be called. She had no desire to be there, but her mom had insisted that she go. She's resisted at first, but over time she realized it was simply easier to appease her and go. Mom tended to be that way. She would keep insisting until you wore down and did what she wanted. So, here she sat, patiently waiting for her number to be called",
 
     "blogList27title": "Ten more steps",
-    "blogList27body": "If he could take ten more steps it would be over, but his legs wouldn't move. He tried to will them to work, but they wouldn't listen to his brain. Ten more steps and it would be over but it didn't appear he would be able to do it",  
+    "blogList27body": "If he could take ten more steps it would be over, but his legs wouldn't move. He tried to will them to work, but they wouldn't listen to his brain. Ten more steps and it would be over but it didn't appear he would be able to do it",
 
     "blogList28title": "He had three simple rules by which he lived",
     "blogList28body": "He had three simple rules by which he lived. The first was to never eat blue food. There was nothing in nature that was edible that was blue. People often asked about blueberries, but everyone knows those are actually purple. He understood it was one of the stranger rules to live by, but it had served him well thus far in the 50+ years of his life",

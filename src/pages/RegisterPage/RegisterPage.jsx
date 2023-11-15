@@ -47,14 +47,14 @@ const RegisterPage = () => {
       console.log(success);
     } catch (err) {
       if (!err?.response) {
-        setErrorMsg("No server response");
+        toast.error('No server response')
       }
       if (err.response?.status === 400) {
-        setErrorMsg("Missing username or password");
+        toast.error('Missing username or password')
       }
       if (err.response?.status === 401) {
         console.log("unauthorized entered");
-        setErrorMsg("Unauthorized");
+        toast.error('Unauthorized')
       }
       console.log(errorMsg);
     }
